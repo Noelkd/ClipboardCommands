@@ -20,7 +20,7 @@ def clean_paste(data):
 # to transfer data from sublime text
 def clean_copy(data):
 	# clean html
-	data = codecs.unicode(data)
+	data = str(data)
 	data = re.sub(r'<br ?/?>', '\n', data, re.I);
 	data = re.sub(r'<[^>]*>', '', data);
 	# clean htmlentities
